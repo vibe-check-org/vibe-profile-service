@@ -2,7 +2,7 @@
 # N o d e
 # ==============================================================================
 node:
-  port: 7103
+  port: 3002
 
 # ==============================================================================
 # D a t e n b a n k
@@ -32,14 +32,9 @@ kafka:
 # K e y c l o a k
 # ==============================================================================
 keycloak:
-  #authServerUrl: http://localhost:8880
-  schema: http
-  host: localhost
-  port: 18080
-  realm: camunda-platform
-  # siehe Keycloak Menuepunkt "Clients" > Tab "Clients list" > Spalte "Client ID"
-  clientId: camunda-identity
-  #tokenValidation: online
+  authServerUrl: http://localhost:8880
+  realm: vibeCheck
+  clientId: vibeCheck
 
 # ==============================================================================
 # L o g g i n g
