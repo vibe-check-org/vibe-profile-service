@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type VibeSkillScore {
+  kategorie: String!
+  punkte: Float!
+}
+
+type VibeProfil {
+  id: ID!
+  userId: String!
+  skills: [VibeSkillScore!]!
+  erstelltAm: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+input VibeSkillScoreInput {
+  kategorie: String!
+  punkte: Float!
+}
+
+type Query {
+  vibeProfil(userId: String!): VibeProfil
+}
+
+type Mutation {
+  berechneVibeProfil(userId: String!, skills: [VibeSkillScoreInput!]!): VibeProfil!
+}
