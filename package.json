@@ -25,6 +25,7 @@
     "prettier": "prettier --cache --write \"src/**/*.ts\""
   },
   "dependencies": {
+    "@apollo/server": "^4.12.2",
     "@apollo/subgraph": "^2.10.2",
     "@js-temporal/polyfill": "^0.5.1",
     "@nestjs/apollo": "^13.1.0",
