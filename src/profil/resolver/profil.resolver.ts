@@ -17,13 +17,13 @@ export class VibeProfilResolver {
     }
 
     @Query(() => VibeProfil, { nullable: true })
-    @Roles({ roles: ['Admin', 'User'] })
+    @Roles({ roles: ['Admin', 'BEWERBER', 'RECRUITER'] })
     vibeProfil(@Args('userId') userId: string) {
         return this.#service.getProfil(userId);
     }
 
     @Mutation(() => VibeProfil)
-    @Roles({ roles: ['Admin', 'User'] })
+    @Roles({ roles: ['Admin', 'BEWERBER', 'RECRUITER'] })
     berechneVibeProfil(
         @Args('userId') userId: string,
         @Args('skills', { type: () => [VibeSkillScore] })
